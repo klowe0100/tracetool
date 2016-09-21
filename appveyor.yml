@@ -1,0 +1,9 @@
+install:
+    - cinst qtbase5-dev qttools5-dev-tools qttools5-dev ninja-build doxygen
+script:
+    - mkdir build 
+    - cd build
+    - cmake -G "Ninja" ..
+    - ninja 
+    - ninja test
+    - ninja package
